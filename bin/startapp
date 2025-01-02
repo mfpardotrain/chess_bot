@@ -1,0 +1,11 @@
+#!usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/cli'
+
+begin
+    Cli.run
+rescue StandardError => e
+    warn "Error: #{e.message}"
+    exit 1
+end
